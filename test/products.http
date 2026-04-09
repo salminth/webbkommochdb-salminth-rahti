@@ -1,0 +1,31 @@
+# Rest - Client
+@apiUrl = https://fw-teaching.fi/demo/wdbocms/api/v1/products/
+
+
+### get all products
+GET {{apiUrl}}
+
+### get one product
+GET {{apiUrl}}/1002
+
+### create new product
+POST {{apiUrl}}
+Content-Type: application/json
+
+    {
+      "name": "Jeans",
+      "price": 49
+    }
+
+
+
+### Update product info
+PATCH {{apiUrl}}/1001
+
+  {
+      "price": 29
+    }
+
+
+### Delete product
+DELETE {{apiUrl}}/1005

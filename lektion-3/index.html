@@ -18,7 +18,10 @@
         const apiUrl = "https://webbkommochdb-salminth-rahti-git-salminth-webbkommdb.2.rahtiapp.fi/api/ip";
         async function getIp() {
             const res = await fetch(apiUrl);
-            console.log("Hello!");
+            const data = await res.json();
+
+            console.log(data);
+            document.getElementById("ip").textContent = data.ip;
         }
         getIp();
 
